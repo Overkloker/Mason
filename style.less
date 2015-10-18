@@ -1,0 +1,29 @@
+.transition(@property, @duration, @timing-function, @delay) {
+  -webkit-transition: @property @duration @timing-function @delay;
+  -moz-transition:    @property @duration @timing-function @delay;
+  -o-transition:      @property @duration @timing-function @delay;
+  transition:         @property @duration @timing-function @delay;
+}
+
+#grid-a {
+  width:    100%;
+  position: relative;
+}
+
+.box {
+  float:            left;
+  background-color: #00ffff;
+  position:         relative;
+  box-sizing: border-box;
+  transition: background 1s cubic-bezier(0.51, -0.67, 0, -0.05);
+  &:hover {
+    background: #ff2530;
+    border: 5px solid #34ff00;
+  }
+}
+
+.moon {
+  width:      100px;
+  height:     10px;
+  background: #ff0000;
+}
